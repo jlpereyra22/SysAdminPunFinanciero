@@ -1,16 +1,93 @@
-# React + Vite
+# Punto Financiero
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema interno de gestión para operaciones de **créditos de consumo**, orientado a controlar clientes, comercios adheridos, créditos, cobros, vencimientos y financistas desde un único panel.
 
-Currently, two official plugins are available:
+El proyecto está pensado como una **herramienta administrativa privada**, no como una app pública.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Estado del proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🟡 **En desarrollo activo**
 
-## Expanding the ESLint configuration
+Actualmente el sistema se encuentra en etapa de:
+- Maquetado visual (UI)
+- Definición de flujos
+- Organización de componentes
+- Preparación para autenticación y rutas protegidas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+La lógica de negocio y persistencia de datos se incorporará en etapas posteriores.
+
+---
+
+## 🧠 ¿Qué hace el sistema?
+
+El sistema permite (o permitirá):
+
+### 📊 Dashboard
+- Total de dinero liberado  
+- Total de dinero financiado  
+- Reintegro por cuotas  
+- Dinero en circulación  
+- Dinero liberado por financista  
+
+### 👤 Clientes
+- Alta y edición de clientes  
+- Visualización de créditos asociados  
+
+### 🏪 Comercios adheridos
+- Gestión de comercios  
+- Asociación de condiciones de financiación (cuotas / intereses)  
+
+### 💳 Créditos
+- Registro de créditos otorgados  
+- Asociación a cliente, comercio y financista  
+- Control individual de cuotas  
+
+### ⏰ Cobros / Vencimientos
+- Visualización de cuotas pendientes  
+- Registro de pagos (efectivo / transferencia / cuenta corriente)  
+- Gestión por cuota (cada cuota tiene su propio ID)  
+
+### 🏦 Financistas
+- Alta de financistas  
+- Comisión asociada  
+- Créditos otorgados por cada uno  
+
+### 🔐 Login (en preparación)
+- Acceso mediante modal  
+- Preparado para futuras rutas protegidas  
+
+---
+
+## 🧱 Tecnologías utilizadas
+
+### Frontend
+- React  
+- Vite  
+- React-Bootstrap  
+- Bootstrap 5  
+- JavaScript (ES6+)  
+
+### Estilos
+- Bootstrap (tema oscuro)  
+- Componentes reutilizables  
+- Diseño jerárquico (cards principales y secundarios)  
+
+---
+
+## 🗂️ Estructura del proyecto
+
+```text
+src/
+├── components/
+│   ├── dashboard/
+│   ├── forms/
+│   ├── login/
+│   └── table/
+├── pages/
+├── services/
+├── hooks/
+├── helpers/
+├── App.jsx
+└── main.jsx
