@@ -19,6 +19,7 @@ function ClientesTable() {
           <th>Contacto</th>
           <th>Mail</th>
           <th>Créditos</th>
+          <th>Editar</th>
         </tr>
       </thead>
 
@@ -35,6 +36,11 @@ function ClientesTable() {
               Ver créditos
             </Button>
           </td>
+          <td className="text-center">
+            <Button size="sm" variant="outline-light">
+              ✏️
+            </Button>
+          </td>
         </tr>
 
         <tr>
@@ -47,6 +53,11 @@ function ClientesTable() {
           <td className="text-center">
             <Button size="sm" variant="outline-info">
               Ver créditos
+            </Button>
+          </td>
+          <td className="text-center">
+            <Button size="sm" variant="outline-light">
+              ✏️
             </Button>
           </td>
         </tr>

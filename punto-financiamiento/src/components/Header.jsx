@@ -1,8 +1,8 @@
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav, Button } from 'react-bootstrap'
 
-function Header({ setView }) {
+function Header({ setView, onLoginClick }) {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="px-4">
+    <Navbar bg="dark" variant="dark" className="px-4">
       <Navbar.Brand
         style={{ cursor: 'pointer' }}
         onClick={() => setView('home')}
@@ -10,14 +10,16 @@ function Header({ setView }) {
         PUNTO FINANCIERO
       </Navbar.Brand>
 
-      <Navbar.Toggle />
-      <Navbar.Collapse>
-        <Nav className="ms-auto">
-          <Nav.Link onClick={() => setView('home')}>Inicio</Nav.Link>
-          <Nav.Link onClick={() => setView('creditos')}>Créditos</Nav.Link>
-          <Nav.Link>Contacto</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+      {/* empuja el botón a la derecha */}
+      <Nav className="ms-auto">
+        <Button
+          variant="outline-info"
+          size="sm"
+          onClick={onLoginClick}
+        >
+          Login
+        </Button>
+      </Nav>
     </Navbar>
   )
 }

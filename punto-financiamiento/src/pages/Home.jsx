@@ -4,7 +4,16 @@ function Home({ setView }) {
   return (
     <Container className="py-5 d-flex justify-content-center">
       <div className="d-grid gap-3 w-50">
-       <Button
+
+        <Button
+          size="lg"
+          variant="outline-info"
+          onClick={() => setView('dashboard')}
+        >
+          DASHBOARD
+        </Button>
+
+        <Button
           size="lg"
           variant="outline-info"
           onClick={() => setView('clientes')}

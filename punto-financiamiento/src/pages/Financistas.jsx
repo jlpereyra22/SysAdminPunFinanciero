@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
-import FinancistasTable from '../components/financistas/FinancistasTable'
+import FinancistasTable from '../components/table/financistas/FinancistasTable'
+import AgregarFinancista from '../components/forms/AgregarFinancista'
 
 function Financistas() {
+  const [showAgregar, setShowAgregar] = useState(false)
+
   return (
     <Container className="py-4">
       {/* TÍTULO + BOTÓN */}
@@ -11,17 +15,25 @@ function Financistas() {
           <h2>Financistas</h2>
         </Col>
         <Col className="text-end">
-          <Button variant="outline-info">
+          <Button
+            variant="outline-info"
+            onClick={() => setShowAgregar(true)}
+          >
             Agregar financista
           </Button>
         </Col>
       </Row>
 
-      {/* SEPARADOR */}
       <hr />
 
-      {/* TABLA (la armamos después) */}
-      /<FinancistasTable /> 
+      {/* TABLA */}
+      <FinancistasTable />
+
+      {/* MODAL */}
+      <AgregarFinancista
+        show={showAgregar}
+        onHide={() => setShowAgregar(false)}
+      />
     </Container>
   )
 }

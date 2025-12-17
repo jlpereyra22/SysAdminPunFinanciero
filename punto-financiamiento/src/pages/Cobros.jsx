@@ -1,26 +1,27 @@
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import CobrosTable from '../components/table/cobros/CobrosTable'
+import RegistrarPago from '../components/forms/RegistrarPago'
 
 function Cobros() {
+  const [showPago, setShowPago] = useState(false)
+
   return (
     <Container className="py-4">
-
-      {/* TÍTULO + BOTÓN */}
-      <Row className="align-items-center mb-3">
+      <Row className="mb-3">
         <Col>
           <h2>Cobros / Vencimientos</h2>
-        </Col>
-        <Col className="text-end">
-          <Button variant="outline-info">
-            Registrar cobro
-          </Button>
         </Col>
       </Row>
 
       <hr />
 
-      <CobrosTable />
+      <CobrosTable onPagar={() => setShowPago(true)} />
 
+      <RegistrarPago
+        show={showPago}
+        onHide={() => setShowPago(false)}
+      />
     </Container>
   )
 }

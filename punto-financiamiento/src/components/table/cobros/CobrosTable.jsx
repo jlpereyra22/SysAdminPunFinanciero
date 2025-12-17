@@ -1,6 +1,6 @@
 import { Table, Button } from 'react-bootstrap'
 
-function CobrosTable() {
+function CobrosTable({ onPagar }) {
   return (
     <Table
       striped
@@ -29,7 +29,11 @@ function CobrosTable() {
           <td className="text-center">15/10/2025</td>
           <td className="text-center">Financista A</td>
           <td className="text-center">
-            <Button size="sm" variant="outline-info">
+            <Button
+              size="sm"
+              variant="outline-info"
+              onClick={onPagar}
+            >
               Pagar
             </Button>
           </td>
@@ -42,7 +46,11 @@ function CobrosTable() {
           <td className="text-center">01/10/2025</td>
           <td className="text-center">Financista B</td>
           <td className="text-center">
-            <Button size="sm" variant="outline-info">
+            <Button
+              size="sm"
+              variant="outline-info"
+              onClick={onPagar}
+            >
               Pagar
             </Button>
           </td>

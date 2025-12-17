@@ -22,6 +22,7 @@ function CreditosTable() {
           <th>Financista</th>
           <th>Fecha entrega</th>
           <th>Comercio</th>
+          <th>Editar</th>
         </tr>
       </thead>
 
@@ -34,15 +35,14 @@ function CreditosTable() {
           <td>$433.333</td>
           <td className="text-center">3</td>
           <td className="text-center">Activo</td>
-          <td className="text-center">
-            <Button size="sm" variant="outline-info">
-              Ver
-            </Button>
-          </td>
+          <td className="text-center">Financista A</td>
           <td className="text-center">12/09/2025</td>
           <td className="text-center">
-            <Button size="sm" variant="outline-warning">
-              Ver
+           enartech
+          </td>
+          <td className="text-center">
+            <Button size="sm" variant="outline-light">
+              ✏️
             </Button>
           </td>
         </tr>
@@ -55,15 +55,15 @@ function CreditosTable() {
           <td>$200.000</td>
           <td className="text-center">6</td>
           <td className="text-center">En mora</td>
-          <td className="text-center">
-            <Button size="sm" variant="outline-info">
-              Ver
-            </Button>
-          </td>
+          <td className="text-center">Financista B</td>
           <td className="text-center">01/08/2025</td>
           <td className="text-center">
-            <Button size="sm" variant="outline-warning">
-              Ver
+            pepito pistola
+          
+          </td>
+          <td className="text-center">
+            <Button size="sm" variant="outline-light">
+              ✏️
             </Button>
           </td>
         </tr>
